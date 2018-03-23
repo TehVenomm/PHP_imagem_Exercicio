@@ -23,9 +23,9 @@
 	{
 		include "conexao.php";
 		$sql = "INSERT INTO contatos_tb VALUES (?, ?, ?, ?)";
-		$clientes = $conexao_pdo -> prepare($sql);
+		$clientes = $conexao -> prepare($sql);
 		$clientes -> execute(array($id, $nome, $email, $link_img));
-		$conexao_pdo = null;
+		$conexao = null;
 	}
 	
 ?>
